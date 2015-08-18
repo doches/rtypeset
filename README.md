@@ -1,7 +1,7 @@
 # An HTML pre-processor for web typography
 
 [![Build Status](https://travis-ci.org/doches/rtypeset.png)](https://travis-ci.org/doches/rtypeset)
-[![Documentation Status](https://inch-ci.org/github/doches/rtypeset.svg?branch=master)](https://inch-ci.org/github/doches/rtypeset)
+[![Documentation Status](https://inch-ci.org/github/doches/rtypeset.svg)](https://inch-ci.org/github/doches/rtypeset)
 
 a pure Ruby typographic pre-processor for HTML inspired by [Typeset.js](https://github.com/davidmerfield/Typeset) that gives you:
 
