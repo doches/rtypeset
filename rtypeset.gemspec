@@ -46,6 +46,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.rubygems_version = "2.4.7"
   s.summary = "An HTML pre-processor for web typography"
+  s.required_ruby_version = '>= 2.1.0'
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
@@ -80,4 +81,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<simplecov>, [">= 0"])
   end
 end
-
