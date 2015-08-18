@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/doches/rtypeset.png)](https://travis-ci.org/doches/rtypeset)
 [![Documentation Status](https://inch-ci.org/github/doches/rtypeset.svg)](https://inch-ci.org/github/doches/rtypeset)
 [![Code Climate](https://codeclimate.com/github/doches/rtypeset/badges/gpa.svg)](https://codeclimate.com/github/doches/rtypeset)
+[![Test Coverage](https://codeclimate.com/github/doches/rtypeset/badges/coverage.svg)](https://codeclimate.com/github/doches/rtypeset/coverage)
 
 a pure Ruby typographic pre-processor for HTML inspired by [Typeset.js](https://github.com/davidmerfield/Typeset) that gives you:
 
