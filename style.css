@@ -11,9 +11,9 @@ p {
 }
 
 .demo {
-  border-left: 4px solid #ddd;
-  border-radius: 2px;
-  padding-left: 8px;
+  padding: 2px 12px;
+  background-color: #f6f6f6;
+  border-radius: 4px;
 }
 
 .container {
