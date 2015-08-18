@@ -7,7 +7,7 @@ module Typeset
   #     Typeset.typeset("do hyphenation on this", {:language => "en_gb"})
   def self.hyphenate(text, options)
     options[:language] ||= 'en_us'
-    hyphen = Text::Hyphen.new(:language => options[:language])
+    hyphen = Text::Hyphen.new(:language => options[:language], :left => 0, :right => 0)
 
     text = hyphen.visualise(text, "\u00AD")
 

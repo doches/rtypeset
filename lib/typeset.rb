@@ -36,16 +36,21 @@ module Typeset
     [:hanging_punctuation, true],
     [:spaces, true],
     [:small_caps, true],
-    [:hyphenate, true],
     [:ligatures, false],
-    [:punctuation, false]
+    [:punctuation, false],
+    [:hyphenate, true]
   ]
+
+  DefaultOptions = {
+    :disable => [],
+    :language => "en_us"
+  }
 
   # The main entry point for Typeset. Pass in raw HTML or text, along with an
   # optional options block.
-  def self.typeset(html, options={})
-    methods = Typeset::DefaultMethods
-    options[:disable] ||= []
+  def self.typeset(html, options=Typeset::DefaultOptions)
+    methods = Typeset::DefaultMethods.dup
+    options[:disable] ||= DefaultOptions[:disable]
     methods.reject! { |method| options[:disable].include?(method[0]) }
 
     methods.each do |func, use_text_nodes|

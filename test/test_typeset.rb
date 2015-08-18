@@ -9,7 +9,7 @@ class TestTypeset < Minitest::Test
   end
 
   def test_quotes
-    assert_equal "“foo”", Typeset.typeset("\"foo\"", {:disable => [:hanging_punctuation]})
+    assert_equal "“foo”", Typeset.typeset("\"foo\"", {:disable => [:hanging_punctuation, :hyphenate]})
     assert_equal "19′ 43.5″", Typeset.typeset("19\' 43.5\"")
   end
 
@@ -28,7 +28,7 @@ class TestTypeset < Minitest::Test
   end
 
   def test_small_caps
-    assert_equal "an <span class=\"small-caps\">FBI</span> agent", Typeset.typeset("an FBI agent")
+    assert_equal "an <span class=\"small-caps\">FBI</span> agent", Typeset.typeset("an FBI agent", OptNoHyphenate)
     assert_equal "The <span class=\"small-caps\">CIA</span>", Typeset.typeset("The CIA", {:disable => [:hanging_punctuation, :hyphenate]})
     assert_equal "<span class=\"small-caps\">NCSA</span>", Typeset.typeset("NCSA", OptNoHyphenate)
     assert_equal "<span class=\"small-caps\">NCSA</span> Mosaic", Typeset.typeset("NCSA Mosaic", OptNoHyphenate)
@@ -54,6 +54,6 @@ class TestTypeset < Minitest::Test
   end
 
   def test_hyphenate
-    assert_equal "do hy\u00ADphen\u00ADation", Typeset.typeset("do hyphenation")
+    assert_equal "do hy\u00ADphen\u00ADation", Typeset.typeset("do hyphenation", Typeset::DefaultOptions)
   end
 end

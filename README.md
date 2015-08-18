@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/rtypeset.svg)](http://badge.fury.io/rb/rtypeset)
 [![Build Status](https://travis-ci.org/doches/rtypeset.png)](https://travis-ci.org/doches/rtypeset)
 [![Documentation Status](https://inch-ci.org/github/doches/rtypeset.svg)](https://inch-ci.org/github/doches/rtypeset)
+[![Code Climate](https://codeclimate.com/github/doches/rtypeset/badges/gpa.svg)](https://codeclimate.com/github/doches/rtypeset)
 
 a pure Ruby typographic pre-processor for HTML inspired by [Typeset.js](https://github.com/davidmerfield/Typeset) that gives you:
 
