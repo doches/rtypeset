@@ -29,19 +29,22 @@ module Typeset
     return content.join("")
   end
 
+  # The default typesetting methods and their configuration. Add new methods here
+  # in whatever order makes sense.
+  DefaultMethods = [
+    [:quotes, true],
+    [:hanging_punctuation, true],
+    [:spaces, true],
+    [:small_caps, true],
+    [:hyphenate, true],
+    [:ligatures, false],
+    [:punctuation, false]
+  ]
+
   # The main entry point for Typeset. Pass in raw HTML or text, along with an
   # optional options block.
   def self.typeset(html, options={})
-    methods = [
-      [:quotes, true],
-      [:hanging_punctuation, true],
-      [:spaces, true],
-      [:small_caps, true],
-      [:hyphenate, true],
-      [:ligatures, false],
-      [:punctuation, false]
-    ]
-
+    methods = Typeset::DefaultMethods
     options[:disable] ||= []
     methods.reject! { |method| options[:disable].include?(method[0]) }
 
