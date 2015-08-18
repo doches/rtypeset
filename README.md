@@ -23,10 +23,10 @@ HTML:
 
     require 'typeset'
 
-    raw_html = &lt;&lt;HTM
-    &lt;p&gt;Yjarni Sigurðardóttir spoke to NATO from Iceland yesterday:
+    raw_html = <<HTM
+    <p>Yjarni Sigurðardóttir spoke to NATO from Iceland yesterday:
     "Light of my life, fire of my florins -- my sin, my soul.
-    The tip of the tongue taking a trip to 118° 19' 43.5".":&lt;/p&gt;
+    The tip of the tongue taking a trip to 118° 19' 43.5".":</p>
     HTM
 
     # Output beautifully-formatted HTML
