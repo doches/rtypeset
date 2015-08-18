@@ -1,18 +1,4 @@
 module Typeset
-  # Holds convenience methods for acronym detection
-  module SmallCaps
-    def self.remove_cruft(word)
-      trailing = ""
-      leading = ""
-
-      if word =~ /([A-Z][A-Z][A-Z]+)/
-        leading,word,trailing = word.split($1)
-      end
-
-      return [leading, word, trailing]
-    end
-  end
-
   # Identify likely acronyms, and wrap them in a 'small-caps' span.
   def self.small_caps(text, options)
     words = text.split(" ")
