@@ -30,30 +30,16 @@ module Typeset
     aligns = "CcOoYTAVvWwY".split('')
     words = text.split(/\s+/)
     words.each_with_index do |word, i|
-      aligns.each do |align|
-        if word[0] == align
-          words[i] = "#{HangingPunctuation.pull(align, align)}#{word.slice(1,word.length)}"
+      [[aligns, false],
+       [HangingPunctuation::SingleWidth, 'single'],
+       [HangingPunctuation::DoubleWidth, 'double']].each do |pair|
+        pair[0].each do |signal|
+          if word[0] == signal
+            words[i] = "#{HangingPunctuation.pull(pair[1], signal)}#{word.slice(1,word.length)}"
 
-          if not words[i-1].nil?
-            words[i-1] = "#{words[i-1]}#{HangingPunctuation.push(align)}"
-          end
-        end
-      end
-      HangingPunctuation::SingleWidth.each do |punctuation|
-        if word[0] == punctuation
-          words[i] = "#{HangingPunctuation.pull('single', punctuation)}#{word.slice(1,word.length)}"
-
-          if not words[i-1].nil?
-            words[i-1] = "#{words[i-1]}#{HangingPunctuation.push('single')}"
-          end
-        end
-      end
-      HangingPunctuation::DoubleWidth.each do |punctuation|
-        if word[0] == punctuation
-          words[i] = "#{HangingPunctuation.pull('double', punctuation)}#{word.slice(1,word.length)}"
-
-          if not words[i-1].nil?
-            words[i-1] = "#{words[i-1]}#{HangingPunctuation.push('double')}"
+            if not words[i-1].nil?
+              words[i-1] = "#{words[i-1]}#{HangingPunctuation.push(pair[1] ? pair[1] : signal)}"
+            end
           end
         end
       end
