@@ -1,4 +1,6 @@
 module Typeset
+  # A poor-man's Smarty Pants implementation. Converts single & double quotes,
+  # tick marks, backticks, and primes into prettier unicode equivalents.
   def self.quotes(text, options)
     # Unencode encoded characters, so our regex mess below works
     text.gsub!('&#39;',"\'")

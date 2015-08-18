@@ -7,7 +7,11 @@ require 'typeset/hanging_punctuation'
 require 'typeset/spaces'
 require 'nokogiri'
 
+# Contains all of our typeset-related class methods. Mix this module into a
+# class, or just call `Typeset#typset` directly
 module Typeset
+  # Parse an HTML fragment with Nokogiri and apply a function to all of the
+  # descendant text nodes
   def self.apply_to_text_nodes(html, &func)
     doc = Nokogiri::HTML("<div id='rtypeset_internal'>#{html}</div>", nil,"UTF-8",Nokogiri::XML::ParseOptions::NOENT)
     doc.search('//text()').each do |node|
@@ -25,6 +29,8 @@ module Typeset
     return content.join("")
   end
 
+  # The main entry point for Typeset. Pass in raw HTML or text, along with an
+  # optional options block.
   def self.typeset(html, options={})
     methods = [
       [:quotes, true],

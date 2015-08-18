@@ -1,4 +1,5 @@
 module Typeset
+  # Holds convenience methods for acronym detection
   module SmallCaps
     def self.remove_cruft(word)
       trailing = ""
@@ -12,6 +13,7 @@ module Typeset
     end
   end
 
+  # Identify likely acronyms, and wrap them in a 'small-caps' span.
   def self.small_caps(text, options)
     words = text.split(" ")
     words.each_with_index do |word, i|

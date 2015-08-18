@@ -1,4 +1,5 @@
 module Typeset
+  # Make dashes, elipses, and start/end punctuation a little prettier.
   def self.punctuation(text, options)
     # Dashes
     text.gsub!('--', '–')

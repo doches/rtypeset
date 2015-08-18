@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "rtypeset"
   gem.homepage = "http://github.com/doches/rtypeset"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{An HTML pre-processor for web typography}
+  gem.description = %Q{A pure Ruby implementation of Typeset.js, an HTML pre-processor for web typography}
   gem.email = "trevor@texasexpat.net"
   gem.authors = ["Trevor Fountain"]
   # dependencies defined in Gemfile
