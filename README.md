@@ -35,11 +35,22 @@ HTML:
     # Output beautifully-formatted HTML
     puts Typeset.typeset(raw_html)
 
-Want more control over your typesetting? You can selectively disable Typeset features by passing
-in an options hash to `#typeset`:
+### Customisation
+
+Want more control over your typesetting? 
+
+#### Disabling Features
+
+You can selectively disable Typeset features by passing in an options hash to `#typeset`:
 
     # Disable hyphenation and small caps conversion.
     options = {:disable => [:hyphenate, :small-caps]}
     Typeset.typeset(raw_html, options)
 
-The full list of disablable modules is: `:quotes`, `:hanging_punctuation`, `:spaces`, `:small_caps`, `:hyphenate`, `:ligatures` and `:punctuation`.
+The full list of modules is: `:quotes`, `:hanging_punctuation`, `:spaces`, `:small_caps`, `:hyphenate`, `:ligatures` and `:punctuation`.
+
+#### Hyphenation Language
+
+If you're using hyphenation (it's on by default!) you may want to specify the language (the default is `en_us`):
+
+    Typeset.typeset(raw_html, {:language => "en_us"})
