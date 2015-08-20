@@ -21,6 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{A pure Ruby implementation of Typeset.js, an HTML pre-processor for web typography}
   gem.email = "trevor@texasexpat.net"
   gem.authors = ["Trevor Fountain"]
+  gem.required_ruby_version = '>= 2.0.0'
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
