@@ -6,7 +6,7 @@
 [![Code Climate](https://codeclimate.com/github/doches/rtypeset/badges/gpa.svg)](https://codeclimate.com/github/doches/rtypeset)
 [![Test Coverage](https://codeclimate.com/github/doches/rtypeset/badges/coverage.svg)](https://codeclimate.com/github/doches/rtypeset/coverage)
 
-a pure Ruby typographic pre-processor for HTML inspired by [Typeset.js](https://github.com/davidmerfield/Typeset) that gives you:
+A pure Ruby typographic pre-processor for HTML inspired by [Typeset.js](https://github.com/davidmerfield/Typeset) that gives you:
 
     * Real hang­ing punc­tu­a­tion
     * Soft hy­phen in­ser­tion
