@@ -10,6 +10,11 @@ class TestTypeset < Minitest::Test
 
   def test_quotes
     assert_equal "“foo”", Typeset.typeset("\"foo\"", {:disable => [:hanging_punctuation, :hyphenate]})
+    assert_equal "foo”", Typeset.typeset("foo\"", {:disable => [:hanging_punctuation, :hyphenate]})
+    assert_equal "foo’s bar", Typeset.typeset("foo's bar", {:disable => [:hanging_punctuation, :hyphenate]})
+    assert_equal "’foo", Typeset.typeset("'foo", {:disable => [:hanging_punctuation, :hyphenate]})
+    assert_equal "foo’", Typeset.typeset("foo'", {:disable => [:hanging_punctuation, :hyphenate]})
+    assert_equal "’93", Typeset.typeset("'93", {:disable => [:hanging_punctuation, :hyphenate]})
     assert_equal "19′ 43.5″", Typeset.typeset("19\' 43.5\"")
   end
 
