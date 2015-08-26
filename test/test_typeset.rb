@@ -42,6 +42,10 @@ class TestTypeset < Minitest::Test
     assert_equal "<span class=\"small-caps\">CAT</span>-5", Typeset.typeset("CAT-5", {:disable => [:hanging_punctuation, :hyphenate]})
   end
 
+  def test_hanging
+    assert_equal "<span class=\"pull-false\">Y</span>early<span class=\"push-Y\"></span>", Typeset.typeset("Yearly", OptNoHyphenate)
+  end
+
   def test_ligatures
     assert_equal "ﬀoo", Typeset.typeset("ffoo")
     assert_equal "ﬁoo", Typeset.typeset("fioo")
