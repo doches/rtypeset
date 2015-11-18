@@ -44,7 +44,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_typeset.rb"
   ]
-  s.homepage = "http://github.com/doches/rtypeset"
+  s.homepage = "http://doches.github.io/rtypeset"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.4.7"
   s.summary = "An HTML pre-processor for web typography"
